@@ -2,6 +2,8 @@
   <%= gravatar_for @user %>
   <%= @user.name %>
 </h1>
-<h1>
-  <span class="label label-primary"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></span>　<%= @user.location %>
-</h1>
+
+<ul class="list-group">
+  <li class="list-group-item"><span class="label label-primary"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span></span>　<%= @user.location %>
+</li>
+</ul>
