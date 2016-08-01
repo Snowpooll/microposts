@@ -9,7 +9,8 @@
       <%= f.label :email %>
       <%= f.email_field :email, class: 'form-control' %>
       
-      <%= render 'form_extend', f: f if params[:action] == ('edit' || 'update') %>
+      
+      <%= render 'form_extend', f: f if (params[:action] == 'edit' || params[:action] == 'update') %>
 
       <%= f.label :password %>
       <%= f.password_field :password, class: 'form-control' %>
