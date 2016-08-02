@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_params, only:[:edit,:update,:show]
-  before_action :correct_user,only:[:edit,:update]
+  before_action :correct_user, only:[:edit,:update]
   
 
   def show
