@@ -5,10 +5,12 @@
         <%= gravatar_for @user %>
         <%= @user.name %>
       </h1>
+    </section>
+    <section class="user-info row">  
+    <div class='col-md-12' id="user-profile">
       
-    <div class='col-xs-12' id="user-profile">
-      <%= render 'follow_foloower_count' %>
       <div class="panel panel-default">
+        <%= render 'follow_foloower_count' %>
         <div class="panel-heading">User profile </div>
         <ul class="list-group" >
           <li class="list-group-item">
@@ -23,12 +25,7 @@
   </aside>
   
   <div class="col-md-8">
-    <%= render 'follow_form' if logged_in? %>
-    <% if @user.microposts.any? %>
-    <h3>Microposts (<%= @user.microposts.count %>)</h3>
-    <ol class="microposts">
-      <%= render @microposts %>
-    </ol>
-    <% end %>
+    <h3><%= @title %> List </h3>
+    <ul class="list-group" id="userlist"><%= render @users %></ul>
   </div>
 </div>
