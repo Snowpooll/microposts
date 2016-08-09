@@ -8,16 +8,7 @@
       
     <div class='col-xs-12' id="user-profile">
       <%= render 'follow_foloower_count' %>
-      <div class="panel panel-default">
-        <div class="panel-heading">User profile </div>
-        <ul class="list-group" >
-          <li class="list-group-item">
-            <span class="label label-primary">
-              <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
-            </span>　<%= @user.location %>
-          </li>
-        </ul>
-        </div>
+      <%= render 'location' %>
       </div>
     </section>
   </aside>

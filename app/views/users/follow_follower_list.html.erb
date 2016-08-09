@@ -9,18 +9,10 @@
     <section class="user-info row">  
     <div class='col-md-12' id="user-profile">
       
-      <div class="panel panel-default">
+ 
         <%= render 'follow_foloower_count' %>
-        <div class="panel-heading">User profile </div>
-        <ul class="list-group" >
-          <li class="list-group-item">
-            <span class="label label-primary">
-              <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
-            </span>　<%= @user.location %>
-          </li>
-        </ul>
-        </div>
-      </div>
+<%= render 'location' %>
+
     </section>
   </aside>
   

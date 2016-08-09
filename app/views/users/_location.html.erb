@@ -1,0 +1,14 @@
+<div class="panel panel-default">
+        <div class="panel-heading">User profile </div>
+        <ul class="list-group" >
+          <li class="list-group-item">
+            <% if @user.location.present? %>
+            <span class="label label-primary">
+              <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+            </span>　<%= @user.location %>
+            <% else %>
+              <span class="text-danger"> no position information </span>
+            <% end %>
+          </li>
+        </ul>
+        </div>
