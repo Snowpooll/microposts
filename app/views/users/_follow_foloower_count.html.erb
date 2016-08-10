@@ -1,0 +1,9 @@
+      <div class="panel panel-default">
+        <div class="panel-heading">Follows & Followers </div>
+        <ul class="list-group" >
+          <li class="list-group-item">
+                <%= link_to "#{@user.follower_users.count} followers",followers_user_path(@user) %>  / 
+                <%= link_to "#{@user.following_users.count} follows",  followings_user_path(@user) %> 
+          </li>
+        </ul>
+        </div>

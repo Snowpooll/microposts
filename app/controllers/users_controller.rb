@@ -1,11 +1,15 @@
 class UsersController < ApplicationController
-  before_action :set_params, only:[:edit,:update,:show]
+  before_action :set_params, only:[:edit,:update,:show, :followings,:followers]
   before_action :correct_user, only:[:edit,:update]
   
 
   def show
+<<<<<<< HEAD
    @user = User.find(params[:id])
    @microposts = @user.microposts.order(created_at: :desc).page(params[:page])
+=======
+   @microposts = @user.microposts.order(created_at: :desc)
+>>>>>>> followings-followers
   end
   
   def new
@@ -34,6 +38,20 @@ class UsersController < ApplicationController
     end
   end
   
+  def followings
+    @title = 'following users'
+ #   @user =  User.find(params[:id]) #before_action で定義のため不要
+    @users = @user.following_users
+    render 'follow_follower_list'
+  end
+  
+  def followers
+    @title = 'follower users' #タイトル表示の文字列
+  #  @user = User.find(params[:id])
+    @users = @user.follower_users
+    render 'follow_follower_list'
+  end
+  
   private
   
   def user_params
@@ -47,4 +65,6 @@ class UsersController < ApplicationController
   def correct_user
     redirect_to root_path if !current_user?(@user)
   end
+  
+
 end

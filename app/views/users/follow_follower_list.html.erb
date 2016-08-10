@@ -1,0 +1,23 @@
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user-info row">
+      <h1 class='col-xs-12'>
+        <%= gravatar_for @user %>
+        <%= @user.name %>
+      </h1>
+    </section>
+    <section class="user-info row">  
+    <div class='col-md-12' id="user-profile">
+      
+ 
+        <%= render 'follow_foloower_count' %>
+<%= render 'location' %>
+
+    </section>
+  </aside>
+  
+  <div class="col-md-8">
+    <h3><%= @title %> List </h3>
+    <ul class="list-group" id="userlist"><%= render @users %></ul>
+  </div>
+</div>

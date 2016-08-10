@@ -52,14 +52,15 @@ group :development do
   
   #better_errorsの画面上にirb/pry(PERL)を表示する
   gem 'binding_of_caller'
+
+  
+  #画像編集機能の追加
+  #gem 'rmagick', "~> 2.15.4", require: 'RMagick'
+end
+
   
   #ページネーション機能
   gem 'kaminari'
   
   #画像投稿機能
   gem 'carrierwave'
-  
-  #画像編集機能の追加
-  #gem 'rmagick', "~> 2.15.4", require: 'RMagick'
-end
-

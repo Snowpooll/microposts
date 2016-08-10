@@ -99,10 +99,17 @@ input {
     text-align: center;
     font-weight: bold;
     font-size: 1.5em;
-
+    .edit_relationship{
+      float:right;
+    }
 }
 #user-profile{
     margin-top: 15px;
+}
+
+/* follow & follower list */
+#userlist li{
+  margin-top: 5px;
 }
 
 /* sidebar */

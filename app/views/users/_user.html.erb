@@ -1,0 +1,9 @@
+  <%#リンクなしの場合、引数の ,user は不要 %> 
+<%#= link_to gravatar_for(user, size: 50), user %>
+<%= link_to user do %>
+<li class="list-group-item clearfix"><%= gravatar_for(user, size: 50) %> <%= user.name %>
+  <% if current_user.following?(@user) %>
+     <%= render 'unfollow' %>
+    <% end %>
+</li> 
+<% end %>
