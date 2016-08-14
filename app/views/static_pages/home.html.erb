@@ -12,6 +12,12 @@
         <div class="col-md-8">
             <h3>Microposts Feed</h3>
             <%#= render 'shared/feed' %>
+            <% if @feed_items.any? %>
+                <ol class="microposts">
+                    <%= render @feed_items %>
+                </ol>
+                <%= paginate @feed_items %>
+            <% end %>
         </div>
     </div>
     
