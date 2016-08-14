@@ -74,3 +74,5 @@ end
   #URLへ自動リンクをはる
   gem 'rails_autolink'
   
+  #cloudinary追加
+gem 'cloudinary'
