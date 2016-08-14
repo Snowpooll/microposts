@@ -34,5 +34,7 @@ module Microposts
     config.action_view.embed_authenticity_token_in_remote_forms = true
     
     config.autoload_paths += Dir[Rails.root.join('app', 'uploaders')]
+    
+    config.autoload_paths += %W(#{config.root}/lib)
   end
 end
