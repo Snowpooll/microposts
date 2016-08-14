@@ -19,6 +19,9 @@ class User < ActiveRecord::Base
   
   has_many :follower_users, through: :follower_relationships, source: :follower
   
+  #uploader 
+  mount_uploader :avatar, AvatarUploader
+  
   
  #他のユーザのフォロー
  def follow(other_user)

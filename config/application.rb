@@ -32,5 +32,7 @@ module Microposts
     
     #ajax js
     config.action_view.embed_authenticity_token_in_remote_forms = true
+    
+    config.autoload_paths += Dir[Rails.root.join('app', 'uploaders')]
   end
 end

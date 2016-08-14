@@ -64,3 +64,9 @@ end
   
   #画像投稿機能
   gem 'carrierwave'
+  
+  #ダミー入力
+  gem 'faker'
+  
+  #URLへ自動リンクをはる
+  gem 'rails_autolink'

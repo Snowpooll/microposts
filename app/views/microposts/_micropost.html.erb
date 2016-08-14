@@ -1,12 +1,20 @@
-<li id="micropost-<%= micropost.id %>">
+<li id="micropost-<%= micropost.id %>" class="clearfix">
     
     <%= link_to gravatar_for(micropost.user, size: 50) , micropost.user %>
-    <span class="user"><%= link_to micropost.user.name ,micropost.user %></span>
-    <span class="content"><%= micropost.content %></span>
+    <div id="micropost-content">
+        <span class="user"><%= link_to micropost.user.name ,micropost.user %></span>
+        <span class="content"><%= auto_link(micropost.content, html: { target: '_blank' }, link: :urls) %>
+        <%= image_tag micropost.picture if micropost.picture %></span>
+    </div>
+    
+    <div id="micropost-timestamp">
+            
     <span class="timestamp">
         Posted <%= time_ago_in_words(micropost.created_at) %> ago.
         <% if current_user == micropost.user %>
-         <%= link_to "delete" ,micropost , method: :delete,data: {confirm: "You sure?"} %>
+         <%= link_to "delete" ,micropost , method: :delete,data: {confirm: "You sure?"} ,class:"btn btn-danger"%>
          <% end %>
-    </span>
+      </span>
+    </div>
+
 </li>

@@ -4,12 +4,10 @@ class UsersController < ApplicationController
   
 
   def show
-<<<<<<< HEAD
+
    @user = User.find(params[:id])
    @microposts = @user.microposts.order(created_at: :desc).page(params[:page])
-=======
-   @microposts = @user.microposts.order(created_at: :desc)
->>>>>>> followings-followers
+
   end
   
   def new
@@ -41,7 +39,7 @@ class UsersController < ApplicationController
   def followings
     @title = 'following users'
  #   @user =  User.find(params[:id]) #before_action で定義のため不要
-    @users = @user.following_users
+    @users = @user.following_users.page(params[:page])
     render 'follow_follower_list'
   end
   
@@ -55,7 +53,7 @@ class UsersController < ApplicationController
   private
   
   def user_params
-    params.require(:user).permit(:name, :email, :location,:password,:password_confirmation)
+    params.require(:user).permit(:name, :email, :location,:password,:password_confirmation,:avatar)
   end
   
   def set_params
