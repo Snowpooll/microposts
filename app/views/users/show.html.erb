@@ -11,7 +11,7 @@
         <%= render 'location' %>
       </div>
       <div class='col-xs-12' id="user-avatar">
-        <%= image_tag @user.avatar, style: "width:100%;" if @user.avatar %>
+        <%= image_tag @user.avatar, style: "width:100%;" if @user.avatar? %>
       </div>
     </section>
   </aside>

@@ -4,7 +4,7 @@
     <div id="micropost-content">
         <span class="user"><%= link_to micropost.user.name ,micropost.user %></span>
         <span class="content"><%= auto_link(micropost.content, html: { target: '_blank' }, link: :urls) %>
-        <%= image_tag micropost.picture if micropost.picture %></span>
+        <%= image_tag micropost.picture if micropost.picture? %></span>
     </div>
     
     <div id="micropost-timestamp">
